@@ -1,32 +1,3 @@
-/*==================================
-* Author        : "ThemeSine"
-* Template Name : CarVilla  HTML Template
-* Version       : 1.0
-==================================== */
-
-/*==================================
-font-family: 'Poppins', sans-serif;
-font-family: 'Rufina', serif;
-==================================== */
-
-
-/*=========== TABLE OF CONTENTS ===========
-1.  General css (Reset code)
-2.  Top-area
-3.  Welcome-hero
-4.  Model-search
-5.  Service
-6.  New-cars
-7.  Featured-cars
-8.  Client-say
-9.  Brand
-10. Blog
-11. Contact
-==========================================*/
-
-/*-------------------------------------
-		1.General css (Reset code)
---------------------------------------*/
 *{
     padding: 0;
     margin: 0;
@@ -441,9 +412,6 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 .featured-cars-txt h3,.featured-cars-txt p{font-size: 13px;}
 /*.single-featured-cars*/
 
-/*-------------------------------------       
-        8. Clients-say 
---------------------------------------*/
 .clients-say{padding:115px 0 80px;background: #f8f9fb;}
 
 /*single-testimonial-box */

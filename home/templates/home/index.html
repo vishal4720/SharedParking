@@ -7,7 +7,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!--font-family-->
     <link
@@ -60,25 +59,9 @@
 
     <!--responsive.css-->
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
-
     <!--welcome-hero start -->
     <section id="home" class="welcome-hero">
       <!-- top-area Start -->
@@ -109,7 +92,6 @@
               <!--/.navbar-header-->
               <!-- End Header Navigation -->
 
-              <!-- Collect the nav links, forms, and other content for toggling -->
               <div
                 class="collapse navbar-collapse menu-ui-design"
                 id="navbar-menu"
@@ -361,7 +343,7 @@
                   <div class="col-md-7 col-sm-12">
                     <div class="new-cars-img">
                       <img
-                        src="assets/images/new-cars-model/ncm1.png"
+                        src="{% static 'images/new-cars-model/ncm1.png' %}"
                         alt="img"
                       />
                     </div>
@@ -404,7 +386,7 @@
                   <div class="col-md-7 col-sm-12">
                     <div class="new-cars-img">
                       <img
-                        src="assets/images/new-cars-model/ncm2.png"
+                        src="{% static 'images/new-cars-model/ncm2.png' %}"
                         alt="img"
                       />
                     </div>
@@ -445,7 +427,7 @@
                   <div class="col-md-7 col-sm-12">
                     <div class="new-cars-img">
                       <img
-                        src="assets/images/new-cars-model/ncm3.png"
+                        src="{% static 'images/new-cars-model/ncm3.png' %}"
                         alt="img"
                       />
                     </div>
@@ -504,7 +486,10 @@
               <div class="single-featured-cars">
                 <div class="featured-img-box">
                   <div class="featured-cars-img">
-                    <img src="assets/images/featured-cars/fc1.png" alt="cars" />
+                    <img
+                      src="{% static 'images/featured-cars/fc1.png' %}"
+                      alt="cars"
+                    />
                   </div>
                   <div class="featured-model-info">
                     <p>
@@ -529,7 +514,10 @@
               <div class="single-featured-cars">
                 <div class="featured-img-box">
                   <div class="featured-cars-img">
-                    <img src="assets/images/featured-cars/fc2.png" alt="cars" />
+                    <img
+                      src="{% static 'images/featured-cars/fc2.png' %}"
+                      alt="cars"
+                    />
                   </div>
                   <div class="featured-model-info">
                     <p>
@@ -556,7 +544,10 @@
               <div class="single-featured-cars">
                 <div class="featured-img-box">
                   <div class="featured-cars-img">
-                    <img src="assets/images/featured-cars/fc3.png" alt="cars" />
+                    <img
+                      src="{% static 'images/featured-cars/fc3.png' %}"
+                      alt="cars"
+                    />
                   </div>
                   <div class="featured-model-info">
                     <p>
@@ -583,7 +574,10 @@
               <div class="single-featured-cars">
                 <div class="featured-img-box">
                   <div class="featured-cars-img">
-                    <img src="assets/images/featured-cars/fc4.png" alt="cars" />
+                    <img
+                      src="{% static 'images/featured-cars/fc4.png' %}"
+                      alt="cars"
+                    />
                   </div>
                   <div class="featured-model-info">
                     <p>
@@ -612,7 +606,10 @@
               <div class="single-featured-cars">
                 <div class="featured-img-box">
                   <div class="featured-cars-img">
-                    <img src="assets/images/featured-cars/fc4.png" alt="cars" />
+                    <img
+                      src="{% static 'images/featured-cars/fc4.png' %}"
+                      alt="cars"
+                    />
                   </div>
                   <div class="featured-model-info">
                     <p>
@@ -639,7 +636,10 @@
               <div class="single-featured-cars">
                 <div class="featured-img-box">
                   <div class="featured-cars-img">
-                    <img src="assets/images/featured-cars/fc5.png" alt="cars" />
+                    <img
+                      src="{% static 'images/featured-cars/fc5.png' %}"
+                      alt="cars"
+                    />
                   </div>
                   <div class="featured-model-info">
                     <p>
@@ -666,7 +666,10 @@
               <div class="single-featured-cars">
                 <div class="featured-img-box">
                   <div class="featured-cars-img">
-                    <img src="assets/images/featured-cars/fc7.png" alt="cars" />
+                    <img
+                      src="{% static 'images/featured-cars/fc7.png' %}"
+                      alt="cars"
+                    />
                   </div>
                   <div class="featured-model-info">
                     <p>
@@ -693,7 +696,10 @@
               <div class="single-featured-cars">
                 <div class="featured-img-box">
                   <div class="featured-cars-img">
-                    <img src="assets/images/featured-cars/fc8.png" alt="cars" />
+                    <img
+                      src="{% static 'images/featured-cars/fc8.png' %}"
+                      alt="cars"
+                    />
                   </div>
                   <div class="featured-model-info">
                     <p>
@@ -739,7 +745,7 @@
                   <div class="testimonial-info">
                     <div class="testimonial-img">
                       <img
-                        src="assets/images/clients/c1.png"
+                        src="{% static 'images/clients/c1.png' %}"
                         alt="image of clients person"
                       />
                     </div>
@@ -771,7 +777,7 @@
                   <div class="testimonial-info">
                     <div class="testimonial-img">
                       <img
-                        src="assets/images/clients/c2.png"
+                        src="{% static 'images/clients/c2.png' %}"
                         alt="image of clients person"
                       />
                     </div>
@@ -803,7 +809,7 @@
                   <div class="testimonial-info">
                     <div class="testimonial-img">
                       <img
-                        src="assets/images/clients/c3.png"
+                        src="{% static 'images/clients/c3.png' %}"
                         alt="image of clients person"
                       />
                     </div>
@@ -846,39 +852,57 @@
           <div class="owl-carousel owl-theme brand-item">
             <div class="item">
               <a href="#">
-                <img src="assets/images/brand/br1.png" alt="brand-image" />
+                <img
+                  src="{% static 'images/brand/br1.png' %}"
+                  alt="brand-image"
+                />
               </a>
             </div>
             <!--/.item-->
             <div class="item">
               <a href="#">
-                <img src="assets/images/brand/br2.png" alt="brand-image" />
+                <img
+                  src="{% static 'images/brand/br2.png' %}"
+                  alt="brand-image"
+                />
               </a>
             </div>
             <!--/.item-->
             <div class="item">
               <a href="#">
-                <img src="assets/images/brand/br3.png" alt="brand-image" />
+                <img
+                  src="{% static 'images/brand/br3.png' %}"
+                  alt="brand-image"
+                />
               </a>
             </div>
             <!--/.item-->
             <div class="item">
               <a href="#">
-                <img src="assets/images/brand/br4.png" alt="brand-image" />
+                <img
+                  src="{% static 'images/brand/br4.png' %}"
+                  alt="brand-image"
+                />
               </a>
             </div>
             <!--/.item-->
 
             <div class="item">
               <a href="#">
-                <img src="assets/images/brand/br5.png" alt="brand-image" />
+                <img
+                  src="{% static 'images/brand/br5.png' %}"
+                  alt="brand-image"
+                />
               </a>
             </div>
             <!--/.item-->
 
             <div class="item">
               <a href="#">
-                <img src="assets/images/brand/br6.png" alt="brand-image" />
+                <img
+                  src="{% static 'images/brand/br6.png' %}"
+                  alt="brand-image"
+                />
               </a>
             </div>
             <!--/.item-->
