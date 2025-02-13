@@ -10,7 +10,6 @@ def login(request):
         user = User.objects.filter(email=req.get("your_email")).values()
         if check_password(req.get("your_pass"),user[0].get("password")):
             return redirect(reverse('home'))
-
     return render(request,'authenticate/login.html')
 
 

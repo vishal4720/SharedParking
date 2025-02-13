@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Available Parking Spaces | Shared Parking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      body {
+        background-color: #f4f4f9;
+      }
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+      .listing-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5 animate__animated animate__fadeIn">
+      <h1 class="listing-header">Explore Parking Spaces Near You</h1>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="https://source.unsplash.com/400x300/?parking-lot"
+              class="card-img-top"
+              alt="Parking Spot"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Central City Parking</h5>
+              <p class="card-text">
+                Well-lit, secure, and available 24/7. Ideal for daily commuters.
+              </p>
+              <a href="#" class="btn btn-primary">Reserve Spot</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="https://source.unsplash.com/400x300/?garage-parking"
+              class="card-img-top"
+              alt="Parking Spot"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Premium Garage Space</h5>
+              <p class="card-text">
+                Covered parking with CCTV and security guards.
+              </p>
+              <a href="#" class="btn btn-primary">Reserve Spot</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="https://source.unsplash.com/400x300/?open-parking"
+              class="card-img-top"
+              alt="Parking Spot"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Spacious Open Lot</h5>
+              <p class="card-text">
+                Easy access, perfect for oversized vehicles or temporary
+                parking.
+              </p>
+              <a href="#" class="btn btn-primary">Reserve Spot</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

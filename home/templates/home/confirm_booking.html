@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Your Booking ✅ | Shared Parking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #eef2f7;
+      }
+      .booking-container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+        max-width: 500px;
+      }
+      .emoji {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <div class="booking-container">
+        <h2 class="mb-4">Confirm Your Parking Spot ✅</h2>
+        <form action="/submit-booking" method="POST">
+          <div class="mb-3">
+            <label for="parkingSpot" class="form-label">Selected Spot 🅿️</label>
+            <input
+              type="text"
+              class="form-control"
+              id="parkingSpot"
+              name="parkingSpot"
+              readonly
+              value="{{ spot }}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="bookingDate" class="form-label">Date 📅</label>
+            <input
+              type="date"
+              class="form-control"
+              id="bookingDate"
+              name="bookingDate"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="timeSlot" class="form-label">Time Slot ⏰</label>
+            <select class="form-select" id="timeSlot" name="timeSlot" required>
+              <option value="9 AM - 12 PM">9 AM - 12 PM</option>
+              <option value="12 PM - 3 PM">12 PM - 3 PM</option>
+              <option value="3 PM - 6 PM">3 PM - 6 PM</option>
+              <option value="6 PM - 9 PM">6 PM - 9 PM</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success w-100">
+            Confirm Booking ✅
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
