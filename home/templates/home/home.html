@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -83,7 +85,7 @@
         <div class="col-md-4">
           <div class="card feature-card p-4 text-center">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxDsPAx0ZJxqilP1Fj7cWkw1MvHzAJOupKFA&s"
+              src="{% static 'images/home/booking.jpg' %}"
               class="card-img-top"
               alt="Easy Booking"
             />
@@ -94,7 +96,7 @@
         <div class="col-md-4">
           <div class="card feature-card p-4 text-center">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuj9bUfBN26eNLM_pAqzya1XsC7olT9XgPrg&s"
+              src="{% static 'images/home/earn.png' %}"
               class="card-img-top"
               alt="Earn Money"
             />
@@ -105,7 +107,7 @@
         <div class="col-md-4">
           <div class="card feature-card p-4 text-center">
             <img
-              src="https://source.unsplash.com/300x200/?payment"
+              src="{% static 'images/home/payment.jpg' %}"
               class="card-img-top"
               alt="Secure Payments"
             />
