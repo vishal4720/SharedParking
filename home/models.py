@@ -14,3 +14,15 @@ class ParkingSpace(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    parking_space = models.ForeignKey(ParkingSpace, on_delete=models.CASCADE)
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField()
+    total_price = models.DecimalField(max_digits=6, decimal_places=2)
+    is_confirmed = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.parking_space.title}"

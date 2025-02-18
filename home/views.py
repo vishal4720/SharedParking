@@ -39,10 +39,10 @@ def signup(request):
         user.save()
         userLogin(request,user)
         return redirect('home',permanent=True)
-    return render(request,'signup.html') 
+    return render(request,'signup.html')
 
 
 @login_required
 def logout(request):
     userLogout(request)
-    return redirect('home',permanent=True) 
+    return redirect('home',permanent=True)

@@ -1,0 +1,145 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container animate__animated animate__fadeIn">
+  <div class="row">
+    <!-- Parking Space Details -->
+    <div class="col-md-8">
+      <div class="card mb-4 animate__animated animate__fadeInLeft">
+        <img
+          src="{{ parking_space.image.url }}"
+          class="card-img-top"
+          alt="{{ parking_space.title }}"
+        />
+        <div class="card-body">
+          <h1 class="card-title display-4">{{ parking_space.title }}</h1>
+          <p class="card-text lead">{{ parking_space.description }}</p>
+          <hr />
+          <div class="row">
+            <div class="col-md-6">
+              <p class="card-text">
+                <i class="fas fa-map-marker-alt text-primary"></i>
+                <strong>Location:</strong> {{ parking_space.location }}
+              </p>
+              <p class="card-text">
+                <i class="fas fa-clock text-primary"></i>
+                <strong>Availability:</strong>{% comment %} {% if
+                parking_space.is_available %}Available {% else %} Not
+                Available{% endif %} {% endcomment %}
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p class="card-text">
+                <i class="fas fa-dollar-sign text-primary"></i>
+                <strong>Price:</strong> ${{ parking_space.price_per_hour }}/hour
+              </p>
+              <p class="card-text">
+                <i class="fas fa-star text-primary"></i>
+                <strong>Rating:</strong> 4.5/5 (Based on 120 reviews)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Section -->
+      <div class="card mb-4 animate__animated animate__fadeInUp">
+        <div class="card-body">
+          <h3 class="card-title">
+            <i class="fas fa-comments text-primary"></i>
+            Reviews
+          </h3>
+          <div class="media mb-3">
+            <img
+              src="https://via.placeholder.com/50"
+              class="mr-3 rounded-circle"
+              alt="User"
+            />
+            <div class="media-body">
+              <h5 class="mt-0">John Doe</h5>
+              <p>Great parking space! Very convenient and secure.</p>
+            </div>
+          </div>
+          <div class="media mb-3">
+            <img
+              src="https://via.placeholder.com/50"
+              class="mr-3 rounded-circle"
+              alt="User"
+            />
+            <div class="media-body">
+              <h5 class="mt-0">Jane Smith</h5>
+              <p>Affordable and well-maintained. Highly recommended!</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">Add a Review</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="col-md-4">
+      <div class="card mb-4 animate__animated animate__fadeInRight">
+        <div class="card-body">
+          <h3 class="card-title">
+            <i class="fas fa-calendar-alt text-primary"></i>
+            Book This Space
+          </h3>
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="{{ form.start_time.id_for_label }}">Start Time</label>
+              <input
+                type="datetime-local"
+                name="start_time"
+                id="id_start_time"
+                class="form-control flatpickr"
+              />
+            </div>
+            <div class="form-group">
+              <label for="{{ form.end_time.id_for_label }}">End Time</label>
+              <input
+                type="datetime-local"
+                name="end_time"
+                id="id_end_time"
+                class="form-control flatpickr"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-check"></i>
+              Book Now
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Host Details -->
+      <div class="card mb-4 animate__animated animate__fadeInRight">
+        <div class="card-body">
+          <h3 class="card-title">
+            <i class="fas fa-user text-primary"></i>
+            Hosted By
+          </h3>
+          <div class="media">
+            <img
+              src="https://via.placeholder.com/50"
+              class="mr-3 rounded-circle"
+              alt="Host"
+            />
+            <div class="media-body">
+              <h5 class="mt-0">{{ parking_space.host.username }}</h5>
+              <p>Member since 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Flatpickr Initialization -->
+<script>
+  flatpickr(".flatpickr", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today", // Prevent selecting past dates
+  });
+</script>
+{% endblock %}
