@@ -11,7 +11,7 @@ def index(request):
 def listing(request):
     return render(request,"home/listing_page.html")
 
-
+@login_required
 def confirmBooking(request,spot):
     return render(request,"home/confirm_booking.html",{"spot":spot})
 

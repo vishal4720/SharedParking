@@ -5,5 +5,4 @@ from home import views as homeViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("home.urls")), 
-    path('auth/',include("authenticate.urls")),
 ]
