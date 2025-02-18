@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container text-center animate__animated animate__fadeIn">
+  <h2 class="mb-4">Booking Confirmed!</h2>
+  <p>
+    Your booking for <strong>{{ booking.parking_space.title }}</strong> has been
+    confirmed.
+  </p>
+  <p><strong>Start Time:</strong> {{ booking.start_time }}</p>
+  <p><strong>End Time:</strong> {{ booking.end_time }}</p>
+  <p><strong>Total Price:</strong> ${{ booking.total_price }}</p>
+  <a href="{% url 'home' %}" class="btn btn-primary">Return to Home</a>
+</div>
+{% endblock %}

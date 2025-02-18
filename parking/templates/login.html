@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container animate__animated animate__fadeIn">
+  <h2 class="text-center mb-4">Login</h2>
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-block">Login</button>
+  </form>
+  <p class="text-center mt-3">
+    Don't have an account? <a href="{% url 'signup' %}">Sign up here</a>
+  </p>
+</div>
+{% endblock %}
