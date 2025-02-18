@@ -1,11 +1,10 @@
-{% load static %}
-
-<!DOCTYPE html>
+{% extends 'home/base.html' %} {% load static %} {% comment %} <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shared Parking | Home</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
@@ -58,17 +57,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#">List Parking</a>
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Bookings</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'listing' %}">List Parking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'dashboard' %}">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'auth:login' %}">Login</a>
+            </li>
           </ul>
         </div>
       </div>
+      {% endcomment %} {% comment %}
     </nav>
-
+    {% endcomment %} {% block content %}
     <section class="hero-section">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
@@ -119,7 +125,7 @@
         </div>
       </div>
     </div>
-
+    {% endblock %} {% comment %}
     <footer class="bg-dark text-white text-center py-3">
       &copy; 2025 Shared Parking. All rights reserved.
     </footer>
@@ -127,3 +133,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+{% endcomment %}

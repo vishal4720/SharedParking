@@ -3,82 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Available Parking Spaces | Shared Parking</title>
+    <title>Book Your Parking Spot | Shared Parking 🚗🅿️</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <style>
       body {
         background-color: #f4f4f9;
       }
-      .card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      .parking-card {
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s;
       }
-      .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      .parking-card:hover {
+        transform: scale(1.05);
       }
-      .listing-header {
-        text-align: center;
-        margin-bottom: 30px;
+      .parking-img {
+        height: 180px;
+        object-fit: cover;
       }
     </style>
   </head>
   <body>
-    <div class="container py-5 animate__animated animate__fadeIn">
-      <h1 class="listing-header">Explore Parking Spaces Near You</h1>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
+    <div class="container my-5">
+      <h1 class="text-center mb-4">Explore Parking Spaces Near You 🚗🅿️</h1>
+      <div class="row g-4">
+        <!-- Sample Parking Spot 1 -->
+        <div class="col-md-4">
+          <div class="card parking-card">
             <img
-              src="https://source.unsplash.com/400x300/?parking-lot"
-              class="card-img-top"
+              src="https://www.concordparking.com/wp-content/uploads/2021/10/DSC_0135.jpg"
+              class="card-img-top parking-img"
               alt="Parking Spot"
             />
+
             <div class="card-body">
-              <h5 class="card-title">Central City Parking</h5>
+              <h5 class="card-title">Central City Parking 🏙️</h5>
               <p class="card-text">
-                Well-lit, secure, and available 24/7. Ideal for daily commuters.
+                Secure parking space in the heart of the city. 24/7
+                surveillance. ₹50/hr
               </p>
-              <a href="#" class="btn btn-primary">Reserve Spot</a>
+              <a
+                href="/confirm-booking/Central City Parking"
+                class="btn btn-primary w-100"
+                >Book Now 🚗</a
+              >
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
+
+        <!-- Sample Parking Spot 2 -->
+        <div class="col-md-4">
+          <div class="card parking-card">
             <img
-              src="https://source.unsplash.com/400x300/?garage-parking"
-              class="card-img-top"
-              alt="Parking Spot"
+              src="https://img1.exportersindia.com/product_images/bc-full/2018/8/2963730/car-parking-shed-1533196886-4160105.jpeg"
+              class="card-img-top parking-img"
+              alt="Garage Parking"
             />
             <div class="card-body">
-              <h5 class="card-title">Premium Garage Space</h5>
+              <h5 class="card-title">Covered Garage 🏠</h5>
               <p class="card-text">
-                Covered parking with CCTV and security guards.
+                Weather-protected parking with attendants. ₹70/hr
               </p>
-              <a href="#" class="btn btn-primary">Reserve Spot</a>
+              <a
+                href="/confirm-booking/Covered Garage"
+                class="btn btn-primary w-100"
+                >Book Now 🚗</a
+              >
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
+
+        <!-- Sample Parking Spot 3 -->
+        <div class="col-md-4">
+          <div class="card parking-card">
             <img
-              src="https://source.unsplash.com/400x300/?open-parking"
-              class="card-img-top"
-              alt="Parking Spot"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnF8uC9kkcearupBNNp92Y0zcdzhDGb8azOQ&s"
+              class="card-img-top parking-img"
+              alt="Open Lot"
             />
             <div class="card-body">
-              <h5 class="card-title">Spacious Open Lot</h5>
+              <h5 class="card-title">Open Lot 🌿</h5>
               <p class="card-text">
-                Easy access, perfect for oversized vehicles or temporary
-                parking.
+                Spacious outdoor parking area. Budget-friendly. ₹30/hr
               </p>
-              <a href="#" class="btn btn-primary">Reserve Spot</a>
+              <a href="/confirm-booking/Open Lot" class="btn btn-primary w-100"
+                >Book Now 🚗</a
+              >
             </div>
           </div>
         </div>

@@ -1,0 +1,31 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .hero-section {
+    background: url("https://static.vecteezy.com/system/resources/previews/002/100/079/large_2x/blurred-car-parking-lot-with-many-cars-abstract-background-free-photo.jpg")
+      no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+  }
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  .feature-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
