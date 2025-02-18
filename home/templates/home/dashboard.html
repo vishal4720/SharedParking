@@ -1,42 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Dashboard | Shared Parking</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-    />
-    <style>
-      body {
-        background-color: #f4f4f9;
-      }
-      .dashboard-card {
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        margin-bottom: 15px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container py-5">
-      <h1 class="mb-4">Welcome Back, John Doe!</h1>
-      <div class="dashboard-card">
-        <h5>Your Recent Bookings</h5>
-        <ul>
-          <li>Central City Parking - 15th Feb 2025</li>
-          <li>Premium Garage Space - 20th Feb 2025</li>
-        </ul>
-      </div>
-      <div class="dashboard-card">
-        <h5>Manage Listings</h5>
-        <p>View or add your own parking spots to earn extra income.</p>
-        <a href="#" class="btn btn-outline-primary">Manage Listings</a>
-      </div>
-      <a href="#" class="btn btn-danger mt-3">Logout</a>
-    </div>
-  </body>
-</html>
+{% extends 'home/base.html' %} {% block content %}
+<div class="container py-5">
+  <h1 class="mb-4">Welcome Back, John Doe!</h1>
+  <div class="dashboard-card">
+    <h5>Your Recent Bookings</h5>
+    <ul>
+      <li>Central City Parking - 15th Feb 2025</li>
+      <li>Premium Garage Space - 20th Feb 2025</li>
+    </ul>
+  </div>
+  <div class="dashboard-card">
+    <h5>Manage Listings</h5>
+    <p>View or add your own parking spots to earn extra income.</p>
+    <a href="#" class="btn btn-outline-primary">Manage Listings</a>
+  </div>
+  <a href="#" class="btn btn-danger mt-3">Logout</a>
+</div>
+{% endblock %}

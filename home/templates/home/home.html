@@ -1,129 +1,50 @@
-{% load static %}
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Find & Share Parking Spots with Ease</h1>
+    <p class="lead">
+      Reserve a parking space in seconds or list your own for extra income!
+    </p>
+    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+  </div>
+</section>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shared Parking | Home</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-    />
-    <style>
-      body {
-        background-color: #f8f9fa;
-      }
-      .hero-section {
-        background: url("https://static.vecteezy.com/system/resources/previews/002/100/079/large_2x/blurred-car-parking-lot-with-many-cars-abstract-background-free-photo.jpg")
-          no-repeat center center/cover;
-        color: white;
-        padding: 100px 0;
-        text-align: center;
-        position: relative;
-      }
-      .hero-overlay {
-        background-color: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-      .hero-content {
-        position: relative;
-        z-index: 1;
-      }
-      .feature-card {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-      }
-      .feature-card:hover {
-        transform: translateY(-5px);
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Shared Parking</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">List Parking</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Bookings</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <section class="hero-section">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>Find & Share Parking Spots with Ease</h1>
-        <p class="lead">
-          Reserve a parking space in seconds or list your own for extra income!
-        </p>
-        <a href="#" class="btn btn-primary btn-lg">Get Started</a>
-      </div>
-    </section>
-
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card feature-card p-4 text-center">
-            <img
-              src="{% static 'images/home/booking.jpg' %}"
-              class="card-img-top"
-              alt="Easy Booking"
-            />
-            <h5 class="mt-3">Easy Booking</h5>
-            <p>Reserve a spot in just a few clicks. No hassle!</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card feature-card p-4 text-center">
-            <img
-              src="{% static 'images/home/earn.png' %}"
-              class="card-img-top"
-              alt="Earn Money"
-            />
-            <h5 class="mt-3">Earn Money</h5>
-            <p>List your unused parking space and earn extra cash.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card feature-card p-4 text-center">
-            <img
-              src="{% static 'images/home/payment.jpg' %}"
-              class="card-img-top"
-              alt="Secure Payments"
-            />
-            <h5 class="mt-3">Secure Payments</h5>
-            <p>
-              All transactions are safe and secured through trusted gateways.
-            </p>
-          </div>
-        </div>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card feature-card p-4 text-center">
+        <img
+          src="{% static 'images/home/booking.jpg' %}"
+          class="card-img-top"
+          alt="Easy Booking"
+        />
+        <h5 class="mt-3">Easy Booking</h5>
+        <p>Reserve a spot in just a few clicks. No hassle!</p>
       </div>
     </div>
-
-    <footer class="bg-dark text-white text-center py-3">
-      &copy; 2025 Shared Parking. All rights reserved.
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+    <div class="col-md-4">
+      <div class="card feature-card p-4 text-center">
+        <img
+          src="{% static 'images/home/earn.png' %}"
+          class="card-img-top"
+          alt="Earn Money"
+        />
+        <h5 class="mt-3">Earn Money</h5>
+        <p>List your unused parking space and earn extra cash.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card feature-card p-4 text-center">
+        <img
+          src="{% static 'images/home/payment.jpg' %}"
+          class="card-img-top"
+          alt="Secure Payments"
+        />
+        <h5 class="mt-3">Secure Payments</h5>
+        <p>All transactions are safe and secured through trusted gateways.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
