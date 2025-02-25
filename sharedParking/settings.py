@@ -9,6 +9,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
+# Razorpay Api keys
+RAZORPAY_KEY_ID = 'rzp_live_OOndD9YIZDBWKT'
+RAZORPAY_KEY_SECRET = 'Up097YRe7yP3AzbEWdzQ7Atj'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

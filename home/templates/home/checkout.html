@@ -1,0 +1,42 @@
+{% extends 'home/base.html' %} {% load static %} {% block content %}
+<div class="container animate__animated animate__fadeIn">
+  <h2 class="text-center mb-4">Complete Your Payment</h2>
+  <div class="card p-4">
+    <p>Total Amount: <strong>₹{{ booking.total_price }}</strong></p>
+    <button id="rzp-button" class="btn btn-primary btn-block">
+      Pay with Razorpay
+    </button>
+  </div>
+</div>
+
+<!-- Razorpay Integration -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  const options = {
+    key: "{{ razorpay_key_id }}",
+    amount: "{{ amount }}",
+    currency: "INR",
+    name: "Shared Parking",
+    description: "Parking Booking Payment",
+    order_id: "{{ order_id }}",
+    handler: function (response) {
+      // Redirect to payment success page with payment ID and signature
+      window.location.href = `{% url 'payment_success' booking.id %}?razorpay_payment_id=${response.razorpay_payment_id}&razorpay_order_id=${response.razorpay_order_id}&razorpay_signature=${response.razorpay_signature}`;
+    },
+    prefill: {
+      name: "{{ request.user.username }}",
+      email: "{{ request.user.email }}",
+    },
+    theme: {
+      color: "#3399cc",
+    },
+  };
+
+  const rzpButton = document.getElementById("rzp-button");
+  rzpButton.onclick = function (e) {
+    const rzp = new Razorpay(options);
+    rzp.open();
+    e.preventDefault();
+  };
+</script>
+{% endblock %}

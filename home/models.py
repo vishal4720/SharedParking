@@ -23,6 +23,9 @@ class Booking(models.Model):
     end_time = models.DateTimeField()
     total_price = models.DecimalField(max_digits=6, decimal_places=2)
     is_confirmed = models.BooleanField(default=False)
+    paid = models.BooleanField(default=False)
+    razorpay_order_id = models.CharField(max_length=100, blank=True, null=True)  # Razorpay order ID
+    razorpay_payment_id = models.CharField(max_length=100, blank=True, null=True)  # Razorpay payment ID
 
     def __str__(self):
         return f"{self.user.username} - {self.parking_space.title}"

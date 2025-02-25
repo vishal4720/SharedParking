@@ -29,7 +29,8 @@
     <div class="container d-flex justify-content-center">
       <div class="booking-container">
         <h2 class="mb-4">Confirm Your Parking Spot ✅</h2>
-        <form action="/submit-booking" method="POST">
+        <form method="POST">
+          {% csrf_token %}
           <div class="mb-3">
             <label for="parkingSpot" class="form-label">Selected Spot 🅿️</label>
             <input
