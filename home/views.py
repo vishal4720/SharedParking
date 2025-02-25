@@ -11,7 +11,7 @@ def index(request):
 def listing(request):
     return render(request,"home/listing_page.html")
 
-@login_required
+@login_required(login_url="/login/")
 def confirmBooking(request,spot):
     return render(request,"home/confirm_booking.html",{"spot":spot})
 
@@ -27,8 +27,14 @@ def login(request):
         user = authenticate(username=req.get("your_email"), password=req.get("your_pass"))
         if user is not None:
             userLogin(request,user)
+            if request.method == "GET":
+                next=request.GET.get("next")
+                if next is not None:
+                    print(next)
             return redirect('home',permanent=True)
+        
 
+ 
     return render(request,'login.html')
 
 
